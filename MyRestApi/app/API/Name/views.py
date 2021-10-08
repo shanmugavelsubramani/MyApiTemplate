@@ -23,7 +23,7 @@ class NameController(MethodResource, Resource):
     @doc(description='This API would take and greet you', tags=['Name endpoint'])
     @use_kwargs(NameControllerSchema, location=('json'))
     def post(self, **kwargs):
-
+        print("Post request received")
         _message = kwargs.get("name", "default")
         response = {"message": _message}
         print(response)
